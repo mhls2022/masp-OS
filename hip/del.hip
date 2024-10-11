@@ -1,0 +1,1 @@
+rmdir("D:\\masp OS\\123")

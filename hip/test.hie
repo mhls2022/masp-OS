@@ -1,0 +1,16 @@
+from hie import Hie
+
+Hie.set_app_name("test")
+
+name = Hie.get_name("test")
+print(name)
+new_dir = Hie.new_dir("test", name)
+new_file = Hie.new_file("test.py", new_dir, name, main_program=True)
+Hie.write_file("print('test567')", new_file, name)
+
+next_dir = Hie.next_dir(new_dir, "next")
+new_file3 = Hie.new_file("test.py", next_dir, name)
+Hie.write_file("print('test123')", new_file3, name)
+print(1)
+
+Hie.end_install()
